@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" type="text/css" href="../css2/iconfont.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #wrap{
+            width: 400px;
+            height: 100%;
+            /*border: solid 1px red;*/
+            /*position: relative;*/
+        }
+        #wrap #top{
+            width: 400px;
+            height: 100px;
+            /*border: solid 1px black;*/
+            position: fixed;
+            background-color: red;
+            left: 0;
+            top: 0;
+            z-index: 400;
+        }
+        #wrap .top-top{
+            width: 400px;
+            height: 40px;
+            /*border: solid 1px red;*/
+            display: flex;
+            flex-wrap:wrap;
+            align-content: space-between;
+            justify-content: space-between;
+            background-color: red;
+        }
+        #wrap .top-top div{
+            width: 90px;
+            height: 40px;
+        }
+        #wrap .top-top .top-top-left{
+            text-align: left;
+            margin-top: 3px;
+            flex: 0.5;
+        }
+        #wrap .top-top .top-top-center{
+            font-size: 25px;
+            color: #ffffff;
+            text-align: center;
+            flex: 2;
+        }
+        #wrap .top-top .top-top-right{
+            text-align: right;
+            margin-top: 3px;
+            flex: 0.5;
+        }
+        #wrap .top-down{
+            width: 350px;
+            height: 35px;
+            border: solid 1px black;
+            display:flex;
+            margin-left: 25px;
+            border-radius: 30px;
+            margin-top: 10px;
+            background-color: white;
+        }
+        #wrap .top-down .top-down-left{
+            width: 35px;
+            height: 35px;
+            /*border: solid 1px black;*/
+        }
+        #wrap .top-down .top-down-right{
+            width: 310px;
+            height: 35px;
+            /*border: solid 1px black;*/
+        }
+        #wrap #big-img{
+            width: 400px;
+            height: 100px;
+            display: flex;
+            margin-top: 100px;
+            justify-content:space-between;
+            /*flex-wrap:wrap;*/
+            /*align-content: space-between;*/
+            /*border: solid 1px black;*/
+        }
+        #wrap #big-img .big-imgs{
+            width: 80px;
+            height: 100px;
+            /*border: solid 1px red;*/
+
+        }
+        #wrap .big-imgs .a{
+            width: 70px;
+            height: 50px;
+            /*border: solid 1px red;*/
+            text-align: center;
+        }
+        #wrap .big-imgs img{
+            width: 50px;
+            height: 50px;
+        }
+        #wrap .big-imgs .b{
+            width: 70px;
+            height: 30px;
+            /*border: solid 1px red;*/
+        }
+        #wrap #center{
+            width: 380px;
+            height: 1500px;
+            /*border: solid 1px black;*/
+            display: flex;
+            justify-content: space-between;
+            flex-wrap:wrap;
+            align-content: space-between;
+            position:absolute;
+            top: 200px;
+            left: 10px;
+        }
+        #wrap #center .c{
+            width: 180px;
+            height: 150px;
+            /*border: solid 1px black;*/
+            text-align: center;
+        }
+        #center .c .c-img{
+            width: 150px;
+            height: 100px;
+            /*border: solid 1px red;*/
+            margin-left: 15px;
+        }
+        #center .c .c-img img{
+            width: 100%;
+            height: 100%;
+        }
+        #center .c .c-font{
+            width: 180px;
+            height: 20px;
+            color: red;
+            font-size: 20px;
+            /*border: solid 1px red;*/
+        }
+        #center .c .c-masage{
+            width: 180px;
+            height: 20px;
+            color:black;
+            font-size: 10px;
+        }
+        #wrap #down{
+            width: 400px;
+            height: 70px;
+            border: solid 1px red;
+            background-color: darkgrey;
+            display: flex;
+            flex-wrap:wrap;
+            align-content: space-between;
+            justify-content: space-between;
+            position: fixed;
+            left: 0px;
+            top:90%;
+            z-index: 400;
+        }
+        #wrap #down .down-a{
+            width: 65px;
+            height: 70px;
+            background-color: darkgrey;
+            /*border: solid 1px red;*/
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="top">
+            <div class="top-top">
+                <div class="top-top-left">
+                    <span class="iconfont" style="color: #ffffff;font-size: 30px" > &#xe64f;</span>
+                </div>
+                <div class="top-top-center"><strong>天猫 TMALL</strong></div>
+                <div class="top-top-right">
+                    <span class="iconfont" style="color: #ffffff;font-size: 30px" >&#xe64d;</span>
+                </div>
+            </div>
+            <div class="top-down">
+                <div class="top-down-left">
+                    <span class="iconfont" style="color: darkgrey;font-size: 30px" > &#xe63c;</span>
+                </div>
+                <div class="top-down-right">
+                    <input type="text " placeholder="请搜索" style="width: 300px;height: 33px;border-radius: 30px;border: white">
+                </div>
+            </div>
+        </div>
+        <div id="big-img">
+            <div class="big-imgs">
+                <div class="a">
+                    <img src="../imgs2/TB1ISdWSFXXXXbFXXXXXXXXXXXX-146-147.png_110x10000.jpg_.webp">
+                </div>
+                <div class="b">
+                    苏宁易购
+                </div>
+            </div>
+            <div class="big-imgs">
+                <div class="a">
+                    <img src="../imgs2/TB1Jc0fSFXXXXXTapXXXXXXXXXX-146-147.png_110x10000.jpg_.webp">
+                </div>
+                <div class="b">
+                    天猫国际
+                </div>
+            </div>
+            <div class="big-imgs">
+                <div class="a">
+                    <img src="../imgs2/TB1wSoFa5qAXuNjy1XdXXaYcVXa-196-196.png">
+                </div>
+                <div class="b">
+                    天猫超市
+                </div>
+            </div>
+            <div class="big-imgs">
+                <div class="a">
+                    <img src="../imgs2/TB15lhOSFXXXXaKXpXXXXXXXXXX-147-147.png_110x10000.jpg_.webp">
+                </div>
+                <div class="b">
+                   聚划算
+                </div>
+            </div>
+        </div>
+        <div id="center">
+            <div class="c">
+                <div class="c-img">
+                    <img src="../imgs2/O1CN017AJ0qw1ssyt3IF8HK_!!2-item_pic.png_290x10000.jpg_.webp">
+                </div>
+                <div class="c-masage">
+                    二次元老婆
+                </div>
+                <div class="c-font"><strong>$149</strong></div>
+            </div>
+            <div class="c">
+                <div class="c-img">
+                    <img src="../imgs2/O1CN01F0jeC01ri9rueH8op_!!4130585664.jpg_290x10000Q75.jpg_.webp">
+                </div>
+                <div class="c-masage">
+                   这是啥？
+                </div>
+                <div class="c-font"><strong>$45.00</strong></div>
+            </div>
+            <div class="c">
+                <div class="c-img">
+                    <img src="../imgs2/O1CN01F2JWha1X2DKHwWa0y_!!0-item_pic.jpg_290x10000Q75.jpg_.webp">
+                </div>
+                <div class="c-masage">
+                   乔丹鞋带
+                </div>
+                <div class="c-font"><strong>$145.00</strong></div>
+            </div>
+            <div class="c">
+                <div class="c-img">
+                    <img src="../imgs2/O1CN01lAEmdp1ajDMEE45fX_!!3392853365-0-lubanu-s.jpg_290x10000Q75.jpg_.webp">
+                </div>
+                <a href="work5.html">
+                    <div class="c-masage">
+                        黑色墙纸
+                    </div>
+                </a>
+                <div class="c-font"><strong>$39.00</strong></div>
+            </div>
+            <div class="c">
+                <div class="c-img">
+                    <img src="../imgs2/O1CN01UMrK1J1xzuyqL0Eqj_!!2047966515.jpg_290x10000Q75.jpg_.webp">
+                </div>
+                <div class="c-masage">
+                   手机壳子
+                </div>
+                <div class="c-font"><strong>$9.9</strong></div>
+            </div>
+            <div class="c">
+                <div class="c-img">
+                    <img src="../imgs2/TB1uTaSLWL7gK0jSZFBXXXZZpXa.jpg_290x10000Q75.jpg_.webp">
+                </div>
+                <div class="c-masage">
+                    拼多多手机
+                </div>
+                <div class="c-font"><strong>$99</strong></div>
+            </div>
+            <div class="c">
+                <div class="c-img">
+                    <img src="../imgs2/TB1qvl2asieb18jSZFvXXaI3FXa.jpg_290x10000Q75.jpg_.webp">
+                </div>
+                <div class="c-masage">
+                    智障泡泡机
+                </div>
+                <div class="c-font"><strong>$26.60</strong></div>
+            </div>
+            <div class="c">
+                <div class="c-img">
+                    <img src="../imgs2/O1CN01lAEmdp1ajDMEE45fX_!!3392853365-0-lubanu-s.jpg_290x10000Q75.jpg_.webp">
+                </div>
+                <div class="c-masage">
+                    女士小手表
+                </div>
+                <div class="c-font"><strong>$130.0</strong></div>
+            </div>
+            <div class="c">
+                <div class="c-img">
+                    <img src="../imgs2/O1CN01UMrK1J1xzuyqL0Eqj_!!2047966515.jpg_290x10000Q75.jpg_.webp">
+                </div>
+                <div class="c-masage">
+                   手机壳子
+                </div>
+                <div class="c-font"><strong>$9.9</strong></div>
+            </div>
+            <div class="c">
+                <div class="c-img">
+                    <img src="../imgs2/O1CN01F2JWha1X2DKHwWa0y_!!0-item_pic.jpg_290x10000Q75.jpg_.webp">
+                </div>
+                <div class="c-masage">
+                    NIFE
+                </div>
+                <div class="c-font"><strong>$191</strong></div>
+            </div>
+            <div class="c">
+                <div class="c-img">
+                    <img src="../imgs2/O1CN01F0jeC01ri9rueH8op_!!4130585664.jpg_290x10000Q75.jpg_.webp">
+                </div>
+                <div class="c-masage">
+                   这到底是啥
+                </div>
+                <div class="c-font"><strong>$16.0</strong></div>
+            </div>
+            <div class="c">
+                <div class="c-img">
+                    <img src="../imgs2/O1CN01dyjyTh1Tfp3jjvoaV_!!0-item_pic.jpg_290x10000Q75.jpg_.webp">
+                </div>
+                <div class="c-masage">
+                   单身男性
+                </div>
+                <div class="c-font"><strong>$99999</strong></div>
+            </div>
+            <div class="c">
+                <div class="c-img">
+                    <img src="../imgs2/O1CN01mnRkQZ1n6MlPd597O_!!0-item_pic.jpg_290x10000Q75.jpg_.webp">
+                </div>
+                <div class="c-masage">
+                    NLFE
+                </div>
+                <div class="c-font"><strong>$232</strong></div>
+            </div>
+            <div class="c">
+                <div class="c-img">
+                    <img src="../imgs2/O1CN01mnRkQZ1n6MlPd597O_!!0-item_pic.jpg_290x10000Q75.jpg_.webp">
+                </div>
+                <div class="c-masage">
+                    NLKE
+                </div>
+                <div class="c-font"><strong>$232</strong></div>
+            </div>
+            <div class="c">
+                <div class="c-img">
+                    <img src="../imgs2/微信图片_20200725215053.jpg">
+                </div>
+                <div class="c-masage">
+                    精神小伙
+                </div>
+                <div class="c-font"><strong>$-9.8</strong></div>
+            </div>
+            <div class="c">
+                <div class="c-img">
+                    <img src="../imgs2/TB1qvl2asieb18jSZFvXXaI3FXa.jpg_290x10000Q75.jpg_.webp">
+                </div>
+                <div class="c-masage">
+                    智商税
+                </div>
+                <div class="c-font"><strong>$1.00</strong></div>
+            </div>
+            <div class="c">
+                <div class="c-img">
+                    <img src="../imgs2/TB1uTaSLWL7gK0jSZFBXXXZZpXa.jpg_290x10000Q75.jpg_.webp">
+                </div>
+                <div class="c-masage">
+                    菠萝手机
+                </div>
+                <div class="c-font"><strong>$55.00</strong></div>
+            </div>
+            <div class="c">
+                <div class="c-img">
+                    <img src="../imgs2/微信图片_20200725215053.jpg">
+                </div>
+                <div class="c-masage">
+                    憨批
+                </div>
+                <div class="c-font"><strong>$1.00</strong></div>
+            </div>
+        </div>
+        <div id="down">
+            <div class="down-a">
+                <a href="work1.html">
+                    <span class="iconfont" style="color: white;font-size: 55px" >&#xe65a;</span>
+                </a>
+            </div>
+            <div class="down-a">
+                <a href="work3.html">
+                    <span class="iconfont" style="color: white;font-size: 55px" >&#xe636;</span>
+                </a>
+            </div>
+            <div class="down-a">
+                <a href="work4.html">
+                    <span class="iconfont" style="color: white;font-size: 55px" >&#xe63b;</span>
+                </a>
+            </div>
+            <div class="down-a">
+                <a href="work2.html">
+                    <span class="iconfont" style="color: white;font-size: 55px" >&#xe667;</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" type="text/css" href="../css2/iconfont.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #wrap{
+            width: 400px;
+            height: 516px;
+            /*border: solid 1px red;*/
+            position: relative;
+            background-color: whitesmoke;
+        }
+        #wrap #top{
+            width: 400px;
+            height: 10px;
+            /*border: solid 1px red;  */
+        }
+        #wrap #top .top-font{
+            width: 200px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+            /*border: solid 1px red;*/
+            margin-left: 90px;
+            /*margin-top: 10px;*/
+
+        }
+        #center{
+            width: 400px;
+            height: 460px;
+            /*border: solid 1px red;*/
+
+        }
+        #center .center-input{
+            width: 400px;
+            height: 80px;
+            /*border: solid 1px red;*/
+            margin-top: 30px;
+            font-size: 15px;
+            background-color: white;
+        }
+        #center .center-input .center-input-img{
+            width: 35px;
+            height: 40px;
+            /*border: solid 1px red;*/
+            display:inline-block;
+            float: right;
+            text-align: center;
+            background-color: white;
+        }
+        #center .center-butten{
+            width: 380px;
+            height: 50px;
+            /*border: solid 1px red;*/
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+        #center .center-down{
+            width: 400px;
+            height: 30px;
+            margin-top: 20px;
+            /*border: solid 1px red;*/
+        }
+        #center .center-down .center-down-a{
+            width: 150px;
+            height: 30px;
+            /*border: solid 1px red;*/
+            float: left;
+            right: 10px;
+            font-size: 15px;
+            color: red;
+            display: inline-block;
+            text-align: center;
+        }
+        #center .center-down .center-down-b{
+            width: 100px;
+            height: 30px;
+            /*border: solid 1px red;*/
+            float: right;
+            left: 10px;
+            text-align: center;
+            font-size: 15px;
+            color: red;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+            <div id="top">
+                <div class="top-font">
+                    淘宝账户登录
+                </div>
+            </div>
+            <div id="center">
+                <div class="center-input">
+                    <form method="post">
+                        <input type="text " placeholder="手机号/邮箱/会员名" style="width: 400px;height: 40px;border: white"><br>
+                        <input type="password" placeholder="请输入登录密码" style="width: 361px;height: 40px;border: white;border-left-color: silver"name="password">
+                        <div class="center-input-img">
+                            <span class="iconfont" style="color: darkgrey;font-size: 30px" > &#xe633;</span>
+                        </div>
+                    </form>
+                </div>
+                <div class="center-butten">
+                    <input type="button" value="登 录" style="width: 380px;height: 50px;background-color: red;color: white;font-size: 20px;border-radius: 10px;border-color: red">
+                </div>
+                <div class="center-down">
+                    <div class="center-down-a">短信验证码登录</div>
+                    <div class="center-down-b">免费注册</div>
+                </div>
+            </div>
+
+    </div>
+</body>
+</html>

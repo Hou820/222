@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>订单列表</title>
+    <link rel="stylesheet" type="text/css" href="../css2/iconfont.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #wrap{
+            width: 400px;
+            height: 800px;
+            background-color: silver;
+        }
+        #top{
+            width: 400px;
+            height: 40px;
+            background-color: white;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 400;
+        }
+        #top div{
+            margin-top: 10px;
+        }
+        #top-down{
+            width: 400px;
+            height: 40px;
+            background-color: silver;
+            position: absolute;
+            display: flex;
+            top: 50px;
+        }
+        #wrap .top-down-left{
+            top: 5px;
+            width: 300px;
+            height: 30px;
+            border: solid 1px white;
+            display: flex;
+            background-color: white;
+            border-radius: 30px;
+            margin-left: 10px;
+        }
+        #wrap .button{
+            top: 5px;
+            width: 70px;
+            height: 30px;
+            background-color: red;
+            border-radius: 20px;
+            margin-left: 10px;
+        }
+        #center{
+            width: 380px;
+            height: 200px;
+            background-color: white;
+            position: absolute;
+            top: 100px;
+            left: 10px;
+            border-radius: 10px;
+        }
+        #center .center-top{
+            width: 380px;
+            height: 30px;
+            /*border: solid 1px red;*/
+            display: flex;
+            flex-wrap:wrap;
+            align-content: space-between;
+            justify-content: space-between;
+        }
+        #center .center-top-left {
+            width: 30px;
+            height: 30px;
+            /*border: solid 1px red;*/
+            /*margin-left: 5px;*/
+            /*margin-top: 5px;*/
+            text-align: center;
+        }
+        #center .center-top-center{
+            width: 80px;
+            height: 30px;
+            /*border: solid 1px red;*/
+            text-align: center;
+            font-size: 10px;
+        }
+        #center .center-top-right{
+            width: 50px;
+            height: 30px;
+            /*border: solid 1px red;*/
+            text-align: center;
+            font-size: 10px;
+            color: red;
+        }
+        #center .center-center{
+            width: 380px;
+            height: 120px;
+            /*border: solid 1px black;*/
+            display: flex;
+        }
+        #center .center-center-img{
+            width: 110px;
+            height: 110px;
+            /*border: solid 1px red;*/
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+        #center .center-center-img img{
+            width: 100px;
+            height: 100px;
+        }
+        #center .center-center-right{
+            width: 250px;
+            height: 110px;
+            /*border: solid 1px red;*/
+            margin-top: 20px;
+        }
+        #center .center-center .a{
+            width: 250px;
+            height: 30px;
+            /*border: solid 1px red;*/
+            font-size: 10px;
+            text-align: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        #center .center-center .b{
+            width: 250px;
+            height: 30px;
+            /*border: solid 1px red;*/
+            font-size: 10px;
+            text-align: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            color: silver;
+        }
+        #center .center-center .c{
+             width: 70px;
+             height: 15px;
+             font-size: 10px;
+             background-color: blanchedalmond;
+             color: red;
+             margin-left: 50px;
+         }
+        #center .center-center .d{
+            width: 20px;
+            height: 20px;
+            font-size: 15px;
+            color: red;
+            margin-left: 50px;
+        }
+        #center .center-down{
+            width: 380px;
+            height: 40px;
+            display: flex;
+            border-top: silver 1px solid;
+            background-color: white;
+        }
+        #center .center-down-left{
+            width: 80px;
+            height: 40px;
+
+        }
+        #center .center-down .a{
+            width: 40px;
+            height: 20px;
+            color: silver;
+            margin-top: 10px;
+            margin-left: 30px;
+        }
+        #center .center-down-right{
+            width: 280px;
+            height: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            /*background-color: red;*/
+        }
+        #center .center-down-right div{
+            width: 80px;
+            height: 25px;
+            color: silver;
+            margin-top: 10px;
+            border-radius: 20px;
+            border: solid 1px silver;
+            text-align: center;
+        }
+        #wrap #down{
+            width: 400px;
+            height: 60px;
+            /*border: solid 1px red;*/
+            background-color: white;
+            display: flex;
+            flex-wrap:wrap;
+            align-content: space-between;
+            justify-content: space-between;
+            position: fixed;
+            left: 0px;
+            top:93%;
+            z-index: 400;
+            font-size: 5px;
+            text-align: center;
+        }
+        #wrap #down .down-a{
+            width: 40px;
+            height: 60px;
+            background-color: white;
+            /*border: solid 1px red;*/
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="top">
+            <div style="margin-left: 10px;color: red">全部</div>
+            <div>待付款</div>
+            <div>待发货</div>
+            <div>待收货</div>
+            <div  style="margin-right: 10px">待评价</div>
+        </div>
+        <div id="top-down">
+            <div class="top-down-left">
+                <span class="iconfont" style="color: darkgrey;font-size: 20px;width: 30px;height: 30px;background-color: white;margin-left: 10px;margin-top: 1px "> &#xe63c;</span>
+                <input type="text " placeholder="请搜索" style="width: 200px;height: 30px;border-radius: 20px;border: white">
+            </div>
+            <div class="button">
+                <input type="button" value="搜索" style="width: 70px;height: 30px;color: white;background-color: red;border-radius: 20px;border: none">
+            </div>
+        </div>
+        <div id="center">
+            <div class="center-top">
+                <div class="center-top-left">
+                    <span class="iconfont" style="color: silver;font-size: 20px" > &#xe69b;</span>
+                </div>
+                <div class="center-top-center">味苦五</div>
+                <div class="center-top-right">交易成功</div>
+            </div>
+            <div class="center-center">
+                <div class="center-center-img">
+                    <img src="../imgs2/O1CN01F0jeC01ri9rueH8op_!!4130585664.jpg_290x10000Q75.jpg_.webp">
+                </div>
+                <div class="center-center-right">
+                    <div class="a">华为尝鲜版10plus/8plus钢化玻璃手机</div>
+                    <div class="b">【优秀青年】#下单请留言型号 备注</div>
+                    <div class="c">七天无理由退换</div>
+                    <div class="d">￥9.90</div>
+                </div>
+            </div>
+            <div class="center-down">
+                <div class="center-down-left">
+                    <div class="a">更多</div>
+                </div>
+                <div class="center-down-right">
+                    <div>查看物流</div>
+                    <div>卖了换钱</div>
+                    <div style="color: white;background-color: red">追加评价</div>
+                </div>
+            </div>
+        </div>
+        <div id="down">
+            <div class="down-a">
+                <a>
+                    <span class="iconfont" style="color: silver;font-size: 30px" >&#xe69b;</span>
+                </a>
+                首页
+            </div>
+            <div class="down-a">
+                <a>
+                    <span class="iconfont" style="color: silver;font-size: 30px" >&#xe63b;</span>
+                </a>
+                购物车
+            </div>
+            <div class="down-a">
+                <a>
+                    <span class="iconfont" style="color: black;font-size: 30px" >&#xe636;</span>
+                </a>
+                订单列表
+            </div>
+            <div class="down-a">
+                <a>
+                    <span class="iconfont" style="color: silver;font-size: 30px" >&#xe667;</span>
+                </a>
+                我的淘宝
+            </div>
+            <div class="down-a">
+                <a>
+                    <span class="iconfont" style="color: silver;font-size: 30px" >&#xe64f;</span>
+                </a>
+                更多
+            </div>
+        </div>
+    </div>
+</body>
+</html>

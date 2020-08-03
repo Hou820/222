@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../css2/iconfont.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>商品详情</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #wrap{
+            width: 400px;
+            height: 800px;
+            /*border: solid 1px red;*/
+            background-color: silver;
+        }
+        #top{
+            width: 400px;
+            height: 30px;
+            /*border: solid 1px red;*/
+            /*定位*/
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 400;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+        #top .top-a{
+            width: 30px;
+            height: 30px;
+            /*border: solid 1px red;*/
+        }
+        #top .top-b{
+            width: 30px;
+            height: 30px;
+            /*border: solid 1px red;*/
+        }
+        #center{
+            width: 400px;
+            height: 800px;
+            /*border: solid 1px red;*/
+            position: absolute;
+        }
+        #big-img{
+            width: 400px;
+            height: 500px;
+            /*border: solid 1px red;*/
+            background-image: url("../imgs2/O1CN01TmWKKX1IHaOS4wW0G_!!1713030868-0-lubanu-s.jpg_2200x2200Q100s50.jpg_.webp");
+            background-size: 100% 100%;
+        }
+        #center .center-top{
+            width: 400px;
+            height: 150px;
+            background-color: white;
+            /*border: solid 1px red;*/
+        }
+        #center .center-top-a{
+            width: 100px;
+            height: 30px;
+            font-size: 30px;
+            color: red;
+            margin-left: 20px;
+            /*border: solid 1px red;*/
+        }
+        #center .center-top-b{
+            width: 350px;
+            height: 50px;
+            font-size: 15px;
+            margin-left: 20px;
+            margin-top: 20px;
+            /*border: solid 1px red;*/
+        }
+        #center .center-top-c{
+            width: 400px;
+            height: 50px;
+
+            /*border: solid 1px red;*/
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+        #center .center-top-c div{
+            width: 100px;
+            height: 20px;
+            margin-left: 20px;
+            font-size: 5px;
+            color: silver;
+            margin-top: 20px;
+            /*border: solid 1px red;*/
+        }
+        #center .center-center{
+            width: 400px;
+            height: 60px;
+            /*border: solid 1px red;*/
+            background-color: white;
+            margin-top: 20px;
+        }
+        #center .center-center .center-center-top{
+            width: 400px;
+            height: 30px;
+            display: flex;
+            /*border: solid 1px red;*/
+        }
+        #center .center-center .center-center-top-a{
+            width: 40px;
+            height: 30px;
+            color: silver;
+            /*border: solid 1px red;*/
+        }
+        #center .center-center .center-center-top-b{
+            width: 350px;
+            height: 30px;
+            /*border: solid 1px red;*/
+        }
+        #center-down{
+            width: 400px;
+            height: 130px;
+            background-color: white;
+            /*border:  solid 1px red;*/
+            margin-top: 20px;
+        }
+        #center-down .center-down-top{
+            width: 400px;
+            height: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+            /*border:  solid 1px red;*/
+        }
+        #center-down .center-down-top div{
+            width: 60px;
+            height: 30px;
+            /*border:  solid 1px red;*/
+            text-align: center;
+        }
+        #center .center-down-down{
+            width: 350px;
+            height: 30px;
+            font-size: 10px;
+            margin-left: 20px;
+            overflow: hidden;
+            /*超出部分变为 省略号效果  text-overflow: ellipsis;*/
+            text-overflow: ellipsis;
+            /*英文  空白间隙      nowrap不换行*/
+            white-space: nowrap;
+            /*border:  solid 1px red;*/
+        }
+        #down{
+            width: 400px;
+            height: 50px;
+            /*border: solid 1px blue;*/
+            background: greenyellow;
+            display: flex;
+            position: fixed;
+            top: 93%;
+            z-index: 400;
+            background-color: white;
+        }
+        #down .down-left{
+            width: 150px;
+            height: 50px;
+            /*border: solid 1px red;*/
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+        #down .down-left div{
+            height: 30px;
+            margin-top: 10px;
+        }
+        #down .down-right{
+            width: 250px;
+            height: 50px;
+            /*border: solid 1px red;*/
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+        #down .down-right div{
+            width: 120px;
+            height: 50px;
+            text-align: center;
+            font-size: 20px;
+            /*border: solid 1px red;*/
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="top">
+            <div class="top-a">
+                <span class="iconfont" style="color: red;font-size: 30px" >&#xe6db;</span>
+            </div>
+            <div class="top-b">
+                <span class="iconfont" style="color: red;font-size: 30px" > &#xe63b;</span>
+            </div>
+        </div>
+        <div id="center">
+            <div id="big-img"></div>
+            <div class="center-top">
+                <div class="center-top-a">￥78</div>
+                <div class="center-top-b">日系原宿风简约直筒裤休闲九分裤子男生夏季中色纯棉宽松阔腿工装裤</div>
+                <div class="center-top-c">
+                    <div>快递：免运费</div>
+                    <div>月销量1604件</div>
+                    <div>浙江杭州</div>
+                </div>
+            </div>
+            <div class="center-center">
+                <div class="center-center-top">
+                    <div class="center-center-top-a">选择</div>
+                    <div class="center-center-top-b">请选择颜色/尺码</div>
+                </div>
+                <div class="center-center-top">
+                    <div class="center-center-top-a">参数</div>
+                    <div class="center-center-top-b">品牌 尺寸</div>
+                </div>
+            </div>
+            <div id="center-down">
+                <div class="center-down-top">
+                    <div style="font-size: 15px;color: silver">商品评论</div>
+                    <div style="font-size: 10px;color: red;width: 50px;height: 20px;margin-top: 10px;">查看全部></div>
+                </div>
+                <div class="center-down-down">
+                    <div>的失败大厦必死啊活动撒哈拉难道就欧萨好滴哦申请GIF皇帝判断奇偶撒旦不是开个但是应该都是</div>
+                </div>
+                <div class="center-down-down">
+                    <div>的失败大厦必死啊活动撒哈拉难道就欧萨好滴哦申请GIF皇帝判断奇偶撒旦不是开个但是应该都是</div>
+                </div>
+                <div class="center-down-down">
+                    <div>的失败大厦必死啊活动撒哈拉难道就欧萨好滴哦申请GIF皇帝判断奇偶撒旦不是开个但是应该都是</div>
+                </div>
+            </div>
+        </div>
+        <div id="down">
+            <div class="down-left">
+                <div>
+                    <span class="iconfont" style="color: silver;font-size: 30px" >&#xe69b;</span>
+                </div>
+                <div>
+                    <span class="iconfont" style="color: blue;font-size: 30px" >&#xe64e;</span>
+                </div>
+                <div>
+                    <span class="iconfont" style="color: silver;font-size: 30px" >&#xe657;</span>
+                </div>
+            </div>
+            <div class="down-right">
+                <a href="work6.html">
+                    <div style="color: white;background-color:darkorange">加入购物车</div>
+                </a>
+                <div style="color: white;background-color: red">立即购买</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

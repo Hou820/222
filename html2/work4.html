@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车页面</title>
+    <link rel="stylesheet" type="text/css" href="../css2/iconfont.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #wrap{
+            width: 400px;
+            height: 560px;
+            /*border: solid 1px red;*/
+            position: relative;
+            background-color: darkgrey;
+        }
+        #wrap #top{
+            width: 400px;
+            height: 50px;
+            /*border: solid 1px red;*/
+            display: flex;
+            flex-wrap:wrap;
+            align-content: space-between;
+            justify-content: space-between;
+            background-color: white;
+        }
+        #top .top-left{
+            width: 30px;
+            height: 30px;
+            /*border: solid 1px red;*/
+            margin-left: 10px;
+            margin-top: 10px;
+            text-align: center;
+        }
+        #top .top-right{
+            width: 150px;
+            height: 30px;
+            /*border: solid 1px red;*/
+            margin-right: 120px;
+            margin-top: 10px;
+            text-align: center;
+            font-size: 20px;
+        }
+        #wrap #center{
+            width: 400px;
+            height: 200px;
+            /*border: solid 1px red;*/
+            background-color: white;
+            margin-top: 20px;
+        }
+        #center .center-top{
+            width: 400px;
+            height: 30px;
+            /*border: solid 1px red;*/
+            display: flex;
+            flex-wrap:wrap;
+            align-content: space-between;
+            justify-content: space-between;
+        }
+        #center .center-top-left {
+            width: 30px;
+            height: 30px;
+            /*border: solid 1px red;*/
+            /*margin-left: 5px;*/
+            /*margin-top: 5px;*/
+            text-align: center;
+        }
+        #center .center-top-center{
+            width: 80px;
+            height: 30px;
+            /*border: solid 1px red;*/
+            text-align: center;
+            font-size: 10px;
+        }
+        #center .center-top-right{
+            width: 50px;
+            height: 30px;
+            /*border: solid 1px red;*/
+            text-align: center;
+            font-size: 10px;
+        }
+        #center .center-center{
+            width: 400px;
+            height: 160px;
+            /*border: solid 1px black;*/
+            display: flex;
+        }
+        #center .center-center-img{
+            width: 110px;
+            height: 110px;
+            /*border: solid 1px red;*/
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+        #center .center-center-img img{
+            width: 100px;
+            height: 100px;
+        }
+        #center .center-center-right{
+            width: 250px;
+            height: 110px;
+            /*border: solid 1px red;*/
+            margin-top: 20px;
+        }
+        #center .center-center .a{
+            width: 250px;
+            height: 30px;
+            /*border: solid 1px red;*/
+            font-size: 15px;
+            text-align: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        #center .center-center .b{
+            width: 250px;
+            height: 30px;
+            /*border: solid 1px red;*/
+            font-size: 15px;
+            text-align: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        #center .center-center .c{
+            width: 250px;
+            height: 45px;
+            /*border: solid 1px red;*/
+            display: flex;
+            justify-content: space-between;
+            align-content: space-between;
+            flex-wrap: wrap;
+            font-size: 20px;
+            color: red;
+        }
+        #center .c div{
+            width: 80px;
+            height: 20px;
+            margin-top: 10px;
+        }
+        #down{
+            width: 400px;
+            height: 100px;
+            /*border: solid 1px red;*/
+            position: fixed;
+            top: 82%;
+        }
+        #down .down-top{
+            width: 400px;
+            height: 50px;
+            /*border: solid 1px red;*/
+            background-color: white;
+            display: flex;
+        }
+        #down .down-top-left{
+            width: 300px;
+            height: 50px;
+            /*border: solid 1px red;*/
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+        #down .down-top-left div{
+            width: 140px;
+            height: 50px;
+            font-size: 23px;
+            /*border: solid 1px red;*/
+        }
+        #down .down-top-right{
+            width: 100px;
+            height: 50px;
+            text-align: center;
+            /*border: solid 1px red;*/
+            background-color: red;
+            color: white;
+            font-size: 30px;
+        }
+        #wrap #down-down{
+            width: 400px;
+            height: 50px;
+            /*border: solid 1px red;*/
+            background-color: white;
+            display: flex;
+            flex-wrap:wrap;
+            align-content: space-between;
+            justify-content: space-between;
+
+        }
+        #wrap #down-down .down-a{
+            width: 75px;
+            height: 50px;
+            background-color:white;
+            /*border: solid 1px red;*/
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="top">
+            <div class="top-left">
+                <span class="iconfont" style="color: silver;font-size: 30px" > &#xe64f;</span>
+            </div>
+            <div class="top-right">购物车（1）</div>
+        </div>
+        <div id="center">
+            <div class="center-top">
+                <div class="center-top-left">
+                    <span class="iconfont" style="color: silver;font-size: 20px" > &#xe64f;</span>
+                </div>
+                <div class="center-top-center">味苦五</div>
+                <div class="center-top-right">编辑</div>
+            </div>
+            <div class="center-center">
+                <div class="center-center-img">
+                    <img src="../imgs2/O1CN01F0jeC01ri9rueH8op_!!4130585664.jpg_290x10000Q75.jpg_.webp">
+                </div>
+                <div class="center-center-right">
+                    <div class="a">大赛哦对啥都能撒开了你没看见我扫地NSA面对</div>
+                    <div class="b">的模式教大家扫i面对泼洒打开你们就撒开动漫视频</div>
+                    <div class="c">
+                        <div class="c-a">￥39.8</div>
+                        <div class="c-b">数量：1</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="down">
+            <div class="down-top">
+                <div class="down-top-left">
+                    <div>
+                        <form>
+                            <label>全选<input type="radio" name="gender" value="全选"></label>
+                        </form>
+                    </div>
+                    <div style="color: red">合计：￥0.00</div>
+                </div>
+                <div class="down-top-right">
+                    结算(0)
+                </div>
+            </div>
+            <div id="down-down">
+                <div class="down-a">
+                    <a>
+                        <span class="iconfont" style="color: darkgrey;font-size: 30px" >&#xe65a;</span>
+                    </a>
+                </div>
+                <div class="down-a">
+                    <a href="work7.html">
+                        <span class="iconfont" style="color: darkgrey;font-size: 30px" >&#xe636;</span>
+                    </a>
+                </div>
+                <div class="down-a">
+                    <a>
+                        <span class="iconfont"style="color: darkgrey;font-size: 30px">&#xe63b;</span>
+                    </a>
+                </div>
+                <div class="down-a">
+                    <a>
+                        <span class="iconfont" style="height: 50px; color: darkgrey;font-size: 30px" >&#xe667;</span>
+                    </a>
+                </div>
+                <div class="down-a">
+                    <a>
+                        <span class="iconfont" style="color: darkgrey;font-size: 30px" >&#xe667;</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
